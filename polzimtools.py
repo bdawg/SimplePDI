@@ -31,8 +31,14 @@ def rotLP(theta, gamma=0):
     #A = np.zeros([4,4])
     return A
 
-
-
+def QUdiag(Q, U):
+    Q = np.float(Q)
+    U = np.float(U)
+    A = np.array(( (1, 0, 0, 0),
+                   (0, Q, 0, 0),
+                   (0, 0, U, 0),
+                   (0, 0, 0, 1)) )
+    return A
 
 @numba.jit(nopython=True)
 def rotImPolz(inIm, theta):

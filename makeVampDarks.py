@@ -39,11 +39,22 @@ filePref = 'darks_40ms_em300_20181017_750-50_Mirror_0'
 nSubFiles = 8 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
 HAFileformat = False
 
+dataPath = '/Users/bnorris/DontBackup/pcal_20180712/'
+filePref = 'pcal20180712_darks_775-50_Mirror_'
+nSubFiles = 2 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Users/bnorris/DontBackup/vampdata_polzEngStars/'
+filePref = 'dark_EM10_20180622_625-50_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
 
 useMedian = True # Take the median of all files, not the mean
+useMedianWithinCube = False # Take the median of all frames, not the mean
 showSEMMap = True
 saveData = True
-saveFilePref = 'summedDarks_'
+saveFilePref = '../SimplePDI_DATA/summedDarks_'
 
 plt.figure()
 if HAFileformat:
@@ -135,7 +146,10 @@ else:
             curHDU = hdulist[0]
             curSuperCube = np.transpose(curHDU.data)
             goodframes = curSuperCube[:, :, 2:nFrms] # Discard 1st 2 frames
-            curDark = np.mean(goodframes, axis=2)
+            if useMedianWithinCube:
+                curDark = np.median(goodframes, axis=2)
+            else:
+                curDark = np.mean(goodframes, axis=2)
             allSummedIms[:, :, curSet, curChan] = curDark
 
             if curChan == 1:
