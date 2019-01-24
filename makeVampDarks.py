@@ -49,6 +49,32 @@ filePref = 'dark_EM10_20180622_625-50_Mirror_0'
 nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
 HAFileformat = False
 
+dataPath = '/Users/bnorris/DontBackup/vampdata_polzEngStars/'
+filePref = 'dark_EM10_20180624_Open_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Users/bnorris/DontBackup/vampdata_polzEngStars/'
+filePref = 'darks_10ms_em20_01_20170903_750-50_Mirror_0'
+nSubFiles = 8 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Users/bnorris/DontBackup/vampdata_polzEngStars/'
+filePref = 'dark_EM00_20180624_Open_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201709/20170903/'
+filePref = 'darks_10ms_em300_01_20170903_750-50_Mirror_0'
+nSubFiles = 16 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/silo4/snert/VAMPIRESData/201806/20180626/'
+filePref = 'dark_em300_20180628_625-50_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+
 
 useMedian = True # Take the median of all files, not the mean
 useMedianWithinCube = False # Take the median of all frames, not the mean

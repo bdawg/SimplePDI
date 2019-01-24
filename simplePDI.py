@@ -567,7 +567,7 @@ class pdiImages:
 
     def makeDiffIms(self, doMask = False, maskRad = 2., maskVal = 1., clim = [], deRotate = True,
             imRange = [], showPlots = None, maskfile = [], calMat_PreRot = [],
-            calMat_PostRot = [], twoCamMode = True, doFlats = False, Ibias = 0,
+            calMat_PostRot = [], twoCamMode = True, doFlats = False, Ibias = 0, darkOffset=None,
             saveAllSummedIms=False, bsRot=89.93, suppressWarnings=True):
         if showPlots is None:
             showPlots = self.showPlots
@@ -603,7 +603,7 @@ class pdiImages:
         pasPerInd = []
         curPaSet = []
         count = 0
-        fileCount = 0 #TO keep PAs correct - correspsonds to original file index
+        fileCount = 0 #TO keep PAs correct - corresponds to original file index
         for ind in imInd:
             print("Rotating set: %d" % ind)
             for h in range(4):
@@ -614,6 +614,9 @@ class pdiImages:
                     for l in range(2):
                         curImIn = self.allSummedImsOrig[:, :, ind, h, c, l]
                         # curImIn = allSummedImsOrig[:, :, ind, h, c, l] - h0c0l0med
+
+                        if darkOffset is not None:
+                            curImIn = curImIn - darkOffset
 
                         if c == 0:
                             curImIn = curImIn * mask1
@@ -794,6 +797,16 @@ class pdiImages:
                 Ia = (cur.h0c0l0 + cur.h0c1l0 + cur.h0c0l1 + cur.h0c1l1) / 4
                 Ib = (cur.h1c0l0 + cur.h1c1l0 + cur.h1c0l1 + cur.h1c1l1) / 4
                 I = (Ia + Ib) / 2
+            if calmode is '1b':
+                plusQ1 = cur.h2c0l0 - cur.h2c1l0
+                minusQ1 = cur.h2c0l1 - cur.h2c1l1
+                Q = (plusQ1 - minusQ1) / 2
+                plusU1 = cur.h3c0l0 - cur.h3c1l0
+                minusU1 = cur.h3c0l1 - cur.h3c1l1
+                U = (plusU1 - minusU1) / 2
+                Ia = (cur.h2c0l0 + cur.h2c1l0 + cur.h2c0l1 + cur.h2c1l1) / 4
+                Ib = (cur.h3c0l0 + cur.h3c1l0 + cur.h3c0l1 + cur.h3c1l1) / 4
+                I = (Ia + Ib) / 2
             if calmode is '2a':
                 plusQ1 = cur.h0c0l0 - cur.h0c1l0
                 minusQ1 = cur.h2c0l0 - cur.h2c1l0
@@ -895,14 +908,17 @@ class pdiImages:
 
     def plotStokesIms(self, data = None, index = None, fignum = 2, clim = None,
                       crop=None, saveFITS=False, savePath=None, showColorbar=True,
-                      savePlotPNG=True):
-        if data == None and index == None:
+                      savePlotPNG=True, apertureRad=None, returnVec=False,
+                      outFilename='outStokesFig.png'):
+        if data is None and index is None:
             # print('Warning: No data or index supplied! Plotting element 0.')
             # data = self.allStokesIms[0]
             print('Warning: No data or index supplied! Plotting SUMMED Stokes ims.')
             data = self.StokesImsSummed
-        elif data == None:
+        elif data is None:
             data = self.allStokesIms[index]
+        elif data is 'partial':
+            data = self.PartialImsSummed
 
         if savePath is None:
             savePath = self.outDir
@@ -918,12 +934,22 @@ class pdiImages:
         if self.showPlots:
             plt.figure(fignum, figsize=[15,8])
             plt.clf()
+            fluxes = []
             for k in range(6):
                 if k == 3: im = p
                 elif k == 4: im = pQ
                 elif k == 5: im = pU
                 else:
                     im = data[:, :, k]
+
+                if apertureRad is not None:
+                    if k in (3, 4, 5):
+                        apertureMean = True
+                    else:
+                        apertureMean = False
+                    flux = self.measureAperture(im, apertureRad, mean=apertureMean)
+                    fluxes.append(flux)
+                    print('Aperture flux for %s: %f' % (idStrings[k], flux))
 
                 if crop is not None:
                     sx = data.shape[1]
@@ -946,8 +972,21 @@ class pdiImages:
             plt.tight_layout()
             plt.pause(0.001)
 
+        if apertureRad is not None:
+            fluxes = np.asarray(fluxes)
+            pQ_s = fluxes[1] / fluxes[0]
+            pU_s = fluxes[2] / fluxes[0]
+            p_s = np.sqrt(pQ_s ** 2 + pU_s ** 2)
+            print('Scalar p: %f' % p_s)
+            print('Scalar pQ: %f' % pQ_s)
+            print('Scalar pU: %f' % pU_s)
+            print(' ')
+            # Tab-delimited: I Q U p pQ pU p_s pQ_s pU_s
+            polzFluxVec = [fluxes[0], fluxes[1], fluxes[2], fluxes[3], fluxes[4],
+                           fluxes[5], p_s, pQ_s, pU_s]
+
         if savePlotPNG:
-            outPath = savePath + 'outStokesFig.png'
+            outPath = savePath + outFilename
             plt.savefig(outPath, dpi=100)
 
         if saveFITS:
@@ -955,6 +994,10 @@ class pdiImages:
             outPath = savePath+'outStokesIms.fits'
             print('Writing FITS file to '+outPath)
             fits.writeto(outPath, fitsData, overwrite=True)
+
+        if returnVec:
+            return polzFluxVec
+
 
 
     def plotSingleIm(self, data = None, imType = None, fignum = 1, clim = None,
@@ -1110,6 +1153,34 @@ class pdiImages:
         plt.figure()
         plt.plot(rads, fluxes)
         return fluxes
+
+
+    def doMultiCals(self, crop=0.25, apertureRad=20):
+        # Convenience function to measure and report multiple calibration types
+        allPolzVecs = []
+        print('Calmode 0:')
+        v = self.plotStokesIms(crop=crop, apertureRad=apertureRad, returnVec=True,
+                               fignum=1, outFilename='stokesFig_Cal0')
+        allPolzVecs.append(v)
+
+        self.partialDiffcal('3a')
+        print('Calmode 3a:')
+        v = self.plotStokesIms(data='partial', crop=crop, apertureRad=apertureRad,
+                               returnVec=True, fignum=2, outFilename='stokesFig_Cal3a')
+        allPolzVecs.append(v)
+
+        self.partialDiffcal('3b')
+        print('Calmode 3b:')
+        v = self.plotStokesIms(data='partial', crop=crop, apertureRad=apertureRad,
+                               returnVec=True, fignum=3, outFilename='stokesFig_Cal3b')
+        allPolzVecs.append(v)
+
+        print('Combined vector (0, 3a, 3b):')
+        allPolzVecsString = ''
+        for k in allPolzVecs:
+            for l in k:
+                allPolzVecsString = allPolzVecsString + '%f'%l + '\t'
+        print(allPolzVecsString)
 
 
 
