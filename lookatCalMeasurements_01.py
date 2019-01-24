@@ -7,7 +7,7 @@ from lookatCalTools import *
 
 dataPath = '../SimplePDI_DATA/'
 inFile = 'Measurements 750nm-Condensed A 20100124a.csv'
-
+inFile = 'Measurements 750nm REVISION 2-Condensed A 20100124a.csv'
 
 pd.set_option('display.max_columns', 100)
 
@@ -43,7 +43,7 @@ subs1pol = subs1pol.sort_values('IMR')
 
 colsToPlot = ['diff p', 'diff pQ', 'diff pU']
 colsToPlot = ['True p', 'p_s', 'True pQ', 'pQ_s', 'True pU', 'pU_s']
-# colsToPlot = ['True pQ', 'pQ_s', 'True pU', 'pU_s']
+colsToPlot = ['True pQ', 'pQ_s', 'True pU', 'pU_s']
 
 
 plotPolvals(subs1unpol, colsToPlot, fignum=1, ylims=(-0.06, 0.06))
@@ -52,7 +52,7 @@ plotPolvals(subs1pol, colsToPlot, fignum=2, ylims=(-0.12, 0.12))
 
 colsToPlot = ['diff p 3a', 'diff pQ 3a', 'diff pU 3a']
 colsToPlot = ['True p', 'p_s 3a', 'True pQ', 'pQ_s 3a', 'True pU', 'pU_s 3a']
-# colsToPlot = ['True pQ', 'pQ_s 3a', 'True pU', 'pU_s 3a']
+colsToPlot = ['True pQ', 'pQ_s 3a', 'True pU', 'pU_s 3a']
 
 plotPolvals(subs1unpol, colsToPlot, fignum=3, ylims=(-0.06, 0.06))
 plotPolvals(subs1pol, colsToPlot, fignum=4, ylims=(-0.12, 0.12))
@@ -60,7 +60,7 @@ plotPolvals(subs1pol, colsToPlot, fignum=4, ylims=(-0.12, 0.12))
 
 colsToPlot = ['diff p 3b', 'diff pQ 3b', 'diff pU 3b']
 colsToPlot = ['True p', 'p_s 3b', 'True pQ', 'pQ_s 3b', 'True pU', 'pU_s 3b']
-# colsToPlot = ['True pQ', 'pQ_s 3b', 'True pU', 'pU_s 3b']
+colsToPlot = ['True pQ', 'pQ_s 3b', 'True pU', 'pU_s 3b']
 
 plotPolvals(subs1unpol, colsToPlot, fignum=5, ylims=(-0.06, 0.06))
 plotPolvals(subs1pol, colsToPlot, fignum=6, ylims=(-0.12, 0.12))

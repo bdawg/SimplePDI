@@ -686,7 +686,7 @@ class pdiImages:
             minusQ2 = cur.h2c0l1 - cur.h2c1l1
             Q2 = (plusQ2 - minusQ2) / 2
             I2 = (cur.h2c0l0 + cur.h2c1l0 + cur.h2c0l1 + cur.h2c1l1) / 4
-            Q = Q1 - Q2
+            Q = (Q1 - Q2) / 2
             ############Q = Q1 + Q2
             I_02 = (I0 + I2) / 2
             #pQ = Q / I_02
@@ -699,7 +699,7 @@ class pdiImages:
             minusU2 = cur.h3c0l1 - cur.h3c1l1
             U2 = (plusU2 - minusU2) / 2
             I3 = (cur.h3c0l0 + cur.h3c1l0 + cur.h3c0l1 + cur.h3c1l1) / 4
-            U = U1 - U2
+            U = (U1 - U2) / 2
             ##############U = U1 + U2
             I_13 = (I1 + I3) / 2
             #pU = U / I_13

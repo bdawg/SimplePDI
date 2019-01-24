@@ -141,11 +141,13 @@ dataPath = '../SimplePDI_DATA/'
 # loadFilename = 'allImsCube_pcal20180712_set2_nopol_750-50_EmptySlot_.npz'
 # loadFilename = 'allImsCube_50pc_altair_02_20180624_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_63Cet_01_20170912_750-50_EmptySlot_0.npz'
-loadFilename = 'allImsCube_GJ504_01_20170619_750-50_EmptySlot_0.npz'
+# loadFilename = 'allImsCube_GJ504_01_20170619_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_HR8799_05_nicePSF_20170912_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_lucky50pc_RhoBoo_02_20180625_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_phiAqr_750_20180622_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_HD183143_03_20170418_750-50_EmptySlot_0.npz'
+# loadFilename = 'allImsCube_50pc_HD206893_02_20180623_750-50_EmptySlot_0.npz'
+loadFilename = 'allImsCube_50pc_HD282411_03_20181215_750-50_EmptySlot_0.npz'
 
 ######################################################################################################
 # Do it
