@@ -269,7 +269,7 @@ class pdiImages:
                         twoCamMode = True, savePath=None, bgMode=0, bgVals=(0, 0),
                         darkFilename=None, skyAnn=(0, 0), showAllIms=False, previewCropRad=None,
                         figNums=(1,2,3), luckyCriteria = None,  # 'pkflux', 'totflux' or 'l2flux' or None
-                        luckyPercent = 99, singleFileOnly=False, alignCoadd=None, restrictRegion=None):
+                        luckyPercent = 99, singleFileOnly=False):
         # Case when files are original FITS files pipeline
         # Note - currently only works with two-camera data
 
@@ -318,9 +318,7 @@ class pdiImages:
 
             if singleFileOnly:
                 print('WARNING: Only using first file, and duplicating it.')
-                #curFileNum = 0
-                if curFileNum == 1:
-                    break
+                curFileNum = 0
 
             for c in range(0, 2):
                 curChan = c
@@ -425,96 +423,67 @@ class pdiImages:
                     curCubeSummed = np.mean(curCube, axis=2)
                     print('Max val in summed UNshifted image: %f' % np.max(curCubeSummed.ravel()))
 
-                    # Make cube of shifted images
-                    curCubeShifted = np.zeros_like(curCube)
-                    # Centre the image
-                    for i in range(0, curCube.shape[2]):
-                        llim = centroidThresh
-
-                        # if bgMode == 2:  # Darkframe subtraction must happen before shifting (moved from below)
-                        #     curCube[:, :, i] = curCube[:, :, i] - darkFrames[:, :, curChan]
-                        #     darkMed = np.median(darkFrames[:, :, curChan])
-                        curIm = copy(curCube[:, :, i])
-
-                        if alignCoadd is not None:
-                            startCut = alignCoadd + 1
-                            endCut = curCube.shape[2] - alignCoadd - 1
-                            if i < startCut:
-                                # Use following frames
-                                curIm = np.mean(curCube[:, :, i:(i + alignCoadd)], 2)
-                            elif i > endCut:
-                                # Use preceeding frames
-                                curIm = np.mean(curCube[:, :, (i - alignCoadd):i], 2)
+                    if method is 'none':
+                        curCubeShifted = curCube
+                        
+                    else:
+                        # Make cube of shifted images
+                        curCubeShifted = np.zeros_like(curCube)
+                        # Centre the image
+                        for i in range(0, curCube.shape[2]):
+                            llim = centroidThresh
+                            curIm = copy(curCube[:, :, i])
+                            # print np.min(curIm.min())
+                            if method is 'com':
+                                if comRad == 0:
+                                    curIm[np.where(curIm <= llim)] = 0
+                                    curCent = ndimage.center_of_mass(curIm)
+                                else:
+                                    curIm[np.where(curIm <= llim)] = 0
+                                    roughCent = np.where(curIm == curIm.max())
+                                    mask = np.zeros_like(curIm)
+                                    mask[roughCent[0][0] - comRad:roughCent[0][0] + comRad,
+                                        roughCent[1][0] - comRad:roughCent[1][0] + comRad] = 1
+                                    curImMasked = curIm * mask
+                                    curCent = ndimage.center_of_mass(curImMasked)
+                            elif method is 'max':
+                                curCent = np.where(curIm == curIm.max())
+                            elif method is 'none':
+                                pass
                             else:
-                                # Use surrounding frames
-                                curIm = np.mean(curCube[:, :, (i - alignCoadd//2):(i + alignCoadd//2)], 2)
+                                print('Error: Unknown centering method specified')
+                            # print curCent
 
-                        if restrictRegion is not None:
-                            mask = np.zeros_like(curIm)
-                            cent = curCube.shape[0] // 2
-                            r = restrictRegion
-                            mask[cent-r:cent+r-1, cent-r:cent+r-1] = 1
-                            curIm = curIm * mask
+                            if showAllIms:
+                                plt.clf()
+                                plt.subplot(121)
+                                im = curCube[:, :, i]
+                                plt.imshow(im, interpolation='nearest')
+                                plt.plot(curCent[1], curCent[0], 'rx', ms=50, mew=1)
+                                if previewCropRad is not None:
+                                    cent = curCube.shape[0] // 2
+                                    pc = previewCropRad
+                                    plt.xlim(cent - pc, cent + pc)
+                                    plt.ylim(cent - pc, cent + pc)
+                                plt.subplot(122)
+                                im = curIm
+                                plt.imshow(im, interpolation='nearest')
+                                plt.plot(curCent[1], curCent[0], 'rx', ms=50, mew=1)
+                                if previewCropRad is not None:
+                                    plt.xlim(cent - pc, cent + pc)
+                                    plt.ylim(cent - pc, cent + pc)
+                                plt.pause(0.001)
 
-                        # print np.min(curIm.min())
-                        if method is 'com':
-                            if comRad == 0:
-                                curIm[np.where(curIm <= llim)] = 0
-                                curCent = ndimage.center_of_mass(curIm)
-                            else:
-                                curIm[np.where(curIm <= llim)] = 0
-                                roughCent = np.where(curIm == curIm.max())
-                                mask = np.zeros_like(curIm)
-                                mask[roughCent[0][0] - comRad:roughCent[0][0] + comRad,
-                                    roughCent[1][0] - comRad:roughCent[1][0] + comRad] = 1
-                                curImMasked = curIm * mask
-                                curIm = curImMasked #DEBUG
-                                curCent = ndimage.center_of_mass(curImMasked)
-                        elif method is 'max':
-                            curCent = np.where(curIm == curIm.max())
-                        elif method is 'none':
-                            curCent = [0,0]
-                        else:
-                            print('Error: Unknown centering method specified')
-                        # print curCent
+                            if bgMode == 2:  # Darkframe subtraction must happen before shifting
+                                curCube[:, :, i] = curCube[:, :, i] - darkFrames[:, :, curChan]
+                                darkMed = np.median(darkFrames[:, :, curChan])
 
-                        if showAllIms:
-                            plt.clf()
-                            plt.subplot(121)
-                            im = curCube[:, :, i]
-                            plt.imshow(im, interpolation='nearest')
-                            plt.plot(curCent[1], curCent[0], 'rx', ms=50, mew=1)
-                            if previewCropRad is not None:
-                                cent = curCube.shape[0] // 2
-                                pc = previewCropRad
-                                plt.xlim(cent - pc, cent + pc)
-                                plt.ylim(cent - pc, cent + pc)
-                            plt.subplot(122)
-                            im = curIm
-                            plt.imshow(im, interpolation='nearest')
-                            plt.plot(curCent[1], curCent[0], 'rx', ms=50, mew=1)
-                            if previewCropRad is not None:
-                                plt.xlim(cent - pc, cent + pc)
-                                plt.ylim(cent - pc, cent + pc)
-                            # # HACK To show only COMRAD region centred:
-                            # plt.xlim(roughCent[1][0] - comRad, roughCent[1][0] + comRad)
-                            # plt.ylim(roughCent[0][0] - comRad, roughCent[0][0] + comRad)
+                            imCent = dim / 2
+                            rowOffset = imCent - curCent[0]
+                            colOffset = imCent - curCent[1]
 
-                            plt.pause(0.001)
-
-                        if bgMode == 2:  # Darkframe subtraction must happen before shifting
-                            curCube[:, :, i] = curCube[:, :, i] - darkFrames[:, :, curChan]
-                            darkMed = np.median(darkFrames[:, :, curChan])
-
-                        imCent = dim / 2
-                        rowOffset = imCent - curCent[0]
-                        colOffset = imCent - curCent[1]
-                        if method is not 'none':
                             curCubeShifted[:, :, i] = ndimage.interpolation.shift(curCube[:, :, i],
                                                                                   [rowOffset, colOffset])
-                        else:
-                            curCubeShifted[:, :, i] = curCube[:, :, i]
-
                     curCubeShiftedSummed = np.mean(curCubeShifted, axis=2)
                     curHDU = fits.PrimaryHDU()
                     curHDU.data = curCubeShiftedSummed
@@ -586,15 +555,6 @@ class pdiImages:
         # This is to maintain compatability with the single-camera data
         pas = np.repeat(allRawPAs, 2)
 
-        if singleFileOnly:
-            allSummedIms[:, :, :, 1, :, :] = allSummedIms[:, :, :, 0, :, :]
-            allSummedIms[:, :, :, 2, :, :] = allSummedIms[:, :, :, 0, :, :]
-            allSummedIms[:, :, :, 3, :, :] = allSummedIms[:, :, :, 0, :, :]
-            pas = np.concatenate((pas, pas, pas, pas))
-            allQualityStats[:, :, 1, :, :] = allQualityStats[:, :, 0, :, :]
-            allQualityStats[:, :, 2, :, :] = allQualityStats[:, :, 0, :, :]
-            allQualityStats[:, :, 3, :, :] = allQualityStats[:, :, 0, :, :]
-
         if saveCube:
             # Save the big cube
             saveFilename = savePath + saveFilePref + filePref
@@ -647,7 +607,7 @@ class pdiImages:
             imRange = [], showPlots = None, maskfile = [], calMat_PreRot = [],
             calMat_PostRot = [], twoCamMode = True, doFlats = False, Ibias = 0, darkOffset=None,
             saveAllSummedIms=False, bsRot=89.93, suppressWarnings=True, paOffset=None, maxPixThresh=50000,
-            reversePA=False, rotatePolz = True, overridePA = None):
+            reversePA=False, rotatePolz = True):
         if showPlots is None:
             showPlots = self.showPlots
         if Ibias > 0:
@@ -664,9 +624,6 @@ class pdiImages:
             imInd = range(nSets)
         paInds = range(0, len(self.allPAsOrig), 4)
         allPAs = np.asarray(self.allPAsOrig[paInds])
-        if overridePA is not None:
-            newPAs = np.ones_like(allPAs) * overridePA
-            allPAs = newPAs
         if paOffset is not None:
             allPAs = allPAs + paOffset
         npa = len(allPAs)
@@ -747,7 +704,6 @@ class pdiImages:
                         if deRotate:
                             allSummedIms[:, :, count, h, c, l] = \
                                 ndimage.interpolation.rotate(curImIn, -pa, mode='nearest', reshape=False)
-                            # print('Rotate by %f' % -pa)
                         else:
                             allSummedIms[:, :, count, h, c, l] = curImIn
 
@@ -812,7 +768,6 @@ class pdiImages:
 
             if rotatePolz:
                 curIm = plz.rotImPolz(curIm, pasPerInd[count])
-                print('Rotate polarisation by %f' % pasPerInd[count])
                 # curIm = plz.rotImPolz(curIm, -pasPerInd[count])
                 # print("WARNING: rotImPolz has MINUS sign")
                 # print("WARNING: rotImPolz DISABLED")
@@ -858,8 +813,6 @@ class pdiImages:
         summedpU = np.asarray(self.allPolzratioU).mean(axis=0)
         self.polzRatioImsSummed = np.sqrt(summedpQ**2 + summedpU**2)
 
-        print("PA range %f - %f (delta = %f)" % (pasPerInd[0], pasPerInd[-1],
-                                                 pasPerInd[-1] - pasPerInd[0]))
         print('Average and absolute max pixel values: ')
         print('%f\t%f' % (np.mean(allMaxVals), np.max(allMaxVals)) )
 
@@ -1020,8 +973,7 @@ class pdiImages:
     def plotStokesIms(self, data = None, index = None, fignum = 2, clim = None,
                       crop=None, saveFITS=False, savePath=None, showColorbar=True,
                       savePlotPNG=True, apertureRad=None, returnVec=False,
-                      outFilename='outStokesFig.png', climp=None, climpQ=None, climpU=None,
-                      printpQVec=False):
+                      outFilename='outStokesFig.png', climp=None, climpQ=None, climpU=None):
 
         if data is None and index is None:
             # print('Warning: No data or index supplied! Plotting element 0.')
@@ -1045,7 +997,6 @@ class pdiImages:
             fitsData = []
 
         if self.showPlots:
-            # plt.close()
             plt.figure(fignum, figsize=[15,8])
             plt.clf()
             fluxes = []
@@ -1087,8 +1038,7 @@ class pdiImages:
                     curClim = clim
 
                 plt.subplot(2, 3, k + 1)
-                # plt.imshow(im, clim=curClim, interpolation='Nearest')
-                plt.imshow(im, interpolation='Nearest')
+                plt.imshow(im, clim=curClim, interpolation='Nearest')
                 plt.title(idStrings[k])
                 if showColorbar:
                     plt.colorbar()
@@ -1105,12 +1055,8 @@ class pdiImages:
             print('Scalar pQ: %f' % pQ_s)
             print('Scalar pU: %f' % pU_s)
             print(' ')
-            ## Tab-delimited: I Q U p pQ pU p_s pQ_s pU_s
+            # Tab-delimited: I Q U p pQ pU p_s pQ_s pU_s
             print('%f \t %f \t %f' % (p_s, pQ_s, pU_s))
-            if printpQVec:
-                # Tab-delimited I Q pQ pQ_s
-                print('%f \t %f \t %f \t %f' % (fluxes[0], fluxes[1], fluxes[4], pQ_s))
-            # I Q U p pQ pU p_s pQ_s pU_s:
             polzFluxVec = [fluxes[0], fluxes[1], fluxes[2], fluxes[3], fluxes[4],
                            fluxes[5], p_s, pQ_s, pU_s]
 

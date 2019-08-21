@@ -129,68 +129,34 @@ centroidThresh = 500 #Values below this clipped to zero for centroiding
 
 dataPath = "/Volumes/BigVampData/201902/20190225/linked/"
 filePref = 'MWC480_02-04_20190225_broadband_EmptySlot_0'
-nSubFiles = 270 *2*2
+nSubFiles = 268 *2*2
 saveFilePref = 'allImsCube_'
 darkFilename = '../SimplePDI_DATA/summedDarks_dark_256_10_em300_02_20190225_Open_Mirror_0.npz'
 centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20170116/linked/"
-filePref = 'ABAur_01-03_20170116_750-50_EmptySlot_0'
-nSubFiles = 332 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
-centroidThresh = 1000 #Values below this clipped to zero for centroiding
 
 dataPath = "/Volumes/BigVampData/201903/20190320/"
 filePref = 'ABAur_01_20190320_750-50_EmptySlot_0'
 nSubFiles = 104 *2*2
 saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_20ms_em300_256px_20190402_750-50_Mirror_0.npz'
+darkFilename = '../SimplePDI_DATA/summedDarks_dark_20ms_em300_20190320_Open_Mirror_0.npz'
 centroidThresh = 1000 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20161215/"
-filePref = 'ABAur_01_20161215_750-50_EmptySlot_0'
-nSubFiles = 32 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_128_10ms_em300_Open_Mirror_.npz'
-centroidThresh = 1000 #Values below this clipped to zero for centroiding
-
-
-# dataPath = "/Volumes/BigVampData/201903/20190321/"
-# filePref = 'HD155528_04_20190321_750-50_EmptySlot_0'
-# nSubFiles = 8 *2*2
-# saveFilePref = 'allImsCube_'
-# darkFilename = '../SimplePDI_DATA/summedDarks_dark_10ms_em300_20190321_750-50_Mirror_0.npz'
-# centroidThresh = 150 #Values below this clipped to zero for centroiding
 
 dataPath = "/Volumes/BigVampData/201903/20190320/"
-filePref = 'HD98800_01_20190320_Open_EmptySlot_0'
-nSubFiles = 36 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_10ms_em300_20190321_750-50_Mirror_0.npz'
-centroidThresh = 150 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/201902/20190226/"
-filePref = 'WDS_02_20190226_750-50_EmptySlot_0'
-filePref = 'HD154445_01_20190226_750-50_EmptySlot_0'
+filePref = 'domeflat_750_em1000_20ms_20190320_750-50_EmptySlot_0'
 nSubFiles = 16 *2*2
 saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_10_em25__RESTARTED___20190226_750-50_Mirror_0.npz'
-centroidThresh = 200 #Values below this clipped to zero for centroiding
+darkFilename = '../SimplePDI_DATA/summedDarks_dark_20ms_em300_512px_20190320_Open_Mirror_0.npz'
+centroidThresh = 1000 #Values below this clipped to zero for centroiding
 
-dataPath = "/Users/bnorris/DontBackup/pcal_20180712/"
-filePref = 'pcal20180712_set2_nopol_750-50_EmptySlot_'
-filePref = 'pcal20180712_set2_p1_750-50_EmptySlot_'
-nSubFiles = 1 *2*2
+dataPath = "/Volumes/BigVampData/201903/20190320/"
+filePref = 'domeflat_750_em300_1s_20190320_750-50_EmptySlot_0'
+nSubFiles = 4 *2*2
 saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_pcal20180712_darks_775-50_Mirror_.npz'
-centroidThresh = 100 #Values below this clipped to zero for centroiding
+darkFilename = '../SimplePDI_DATA/summedDarks_dark_1000ms_em300_20190320_Open_Mirror_0.npz'
+centroidThresh = 1000 #Values below this clipped to zero for centroiding
 
-
-
-
-
+# start image _089_cam2 at 5:45pm
+# 97_cam1 att 5:52
 
 startFileNum = 0
 
@@ -206,34 +172,19 @@ bgVals = (176.5, 178.9) # (chan1, chan2)
 skyAnnInner = 90
 skyAnnOuter = 120
 
-luckyCriteria = None #'l2flux'
+luckyCriteria = None
 # luckyCriteria = 'l2flux'
-luckyPercent = 50
-# luckyPercent = 95
+luckyPercent = 95
 
-restrictRegion = None
 
 # darkFilename = None
 # bgMode = 0
 
 
 showAllIms = False
-# showAllIms = True
-previewCropRad = 100 #25
-
+previewCropRad = 250 #25
 comRad=4
-# comRad = 8 # Usually 4 is good, but more if saturated...
-# comRad=3
-
-
-alignCoadd = 5
-alignCoadd = None
-
-singleFileOnly = False #False
-singleFileOnly = True
-
-
-
+comRad = 8 # Usually 4 is good, but more if saturated...
 
 ######################################################################################################
 # Settings for making the differential images
@@ -242,7 +193,7 @@ twoCamMode = True # If true, just reflect chan2 horizontally, not rotate.
 doDerotate = True
 # bsRot = 89.93
 
-# dataPath = '../SimplePDI_DATA/'
+# dataPah = '../SimplePDI_DATA/'
 # dataPath = '/Users/bnorris/DontBackup/vampdata_Oct2018/'
 #
 #
@@ -268,10 +219,9 @@ doDerotate = True
 # loadFilename = 'allImsCube_50pc_HD183143_03_20170418_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_HD198478_04_20180623_750-50_EmptySlot_0.npz'
 
-loadFilename = 'allImsCube_50pc_HD30454_03_20181022_750-50_EmptySlot_0.npz'
+loadFilename = 'allImsCube_MWC480_02-04_20190225_broadband_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_HD44612_01_20181215_750-50_EmptySlot_0.npz'
-
-
+loadFilename = 'allImsCube_ABAur_01-02_20180108_750-50_EmptySlot_0.npz' # The weird circle-smeared one
 
 ######################################################################################################
 # Do it
@@ -283,16 +233,15 @@ p = pdiImages(outDir='../SimplePDI_DATA/')
 
 p.processRawFiles(dataPath, filePref, nSubFiles, startFileNum=startFileNum,
                   saveFilePref=saveFilePref, centroidThresh=centroidThresh,
-                  method='com', twoCamMode = True, bgMode=bgMode, darkFilename=darkFilename,
+                  method='none', twoCamMode = True, bgMode=bgMode, darkFilename=darkFilename,
                   showAllIms=showAllIms, previewCropRad=previewCropRad, comRad=comRad,
-                  luckyCriteria=luckyCriteria, luckyPercent=luckyPercent, singleFileOnly=singleFileOnly,
-                  alignCoadd=alignCoadd, restrictRegion=restrictRegion)
+                  luckyCriteria=luckyCriteria, luckyPercent=luckyPercent, singleFileOnly=False)
 
 # p.loadCube(dataPath, loadFilename, twoCamMode = twoCamMode)
 
 p.makeDiffIms(showPlots=False, twoCamMode=twoCamMode, deRotate=doDerotate, darkOffset=None)
 
-### p.plotStokesIms(crop=0.5, apertureRad=20)
+p.plotStokesIms(crop=0.25, apertureRad=20)
 
 # p.doMultiCals(apertureRad=20)
 # p.doMultiCals(apertureRad=8)
@@ -303,12 +252,7 @@ p.makeDiffIms(showPlots=False, twoCamMode=twoCamMode, deRotate=doDerotate, darkO
 # p.plotStokesIms(crop=0.25, apertureRad=20)
 
 
-# For lab data 20180712: (no hwp data)
-# Make sure singleFileOnly = True
-p.partialDiffcal('1a', showImageCrop=0.5, showImageType='pQ', clim=[0,1])
-p.plotStokesIms(data='partial', crop=0.5, apertureRad=20, printpQVec=True, fignum=1)
-
-
+# For lab data 20180712:
 # p.processRawFiles(dataPath, filePref, nSubFiles, startFileNum=startFileNum,
 #                   saveFilePref=saveFilePref, centroidThresh=centroidThresh,
 #                   method='com', twoCamMode = True, bgMode=bgMode, darkFilename=darkFilename,

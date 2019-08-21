@@ -82,7 +82,7 @@ for fSet in range(len(filePrefs)):
             curFilenumStr = '%d' % curFileNum
             curFilename = dataPath + filePref + curFilenumStr + curCamStr + fileExtn
 
-            print('Reading file %s' % curFilename)
+            print 'Reading file %s' % curFilename
             hdulist = fits.open(curFilename)
             curHDU = hdulist[0]
             curSuperCube = np.transpose(curHDU.data)  # 'Super' since both FLC states

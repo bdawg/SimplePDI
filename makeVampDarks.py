@@ -74,6 +74,52 @@ filePref = 'dark_em300_20180628_625-50_Mirror_0'
 nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
 HAFileformat = False
 
+dataPath = '/Volumes/RedDisk/VAMPIRES_AllData_2018/201812/20181214/'
+filePref = 'SKIES_02_20181215_750-50_EmptySlot_0'
+nSubFiles = 12 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/RedDisk/VAMPIRES_AllData_2018/201810/20181022/'
+filePref = 'darks_5ms_128px_em25_20181022_750-50_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201902/20190225/'
+filePref = 'dark_256_10_em300_02_20190225_Open_Mirror_0'
+nSubFiles = 16 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201704/20170502/'
+filePref = 'darks_256_10ms_em300_20170502_750-50_Mirror_0'
+nSubFiles = 64 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201903/20190320/'
+filePref = 'dark_1000ms_em300_20190320_Open_Mirror_0'
+nSubFiles = 4 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201903/20190321/'
+filePref = 'dark_10ms_em300_20190321_750-50_Mirror_0'
+nSubFiles = 8 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201810/20181017/'
+filePref = 'darks_40ms_em300_20181017_750-50_Mirror_0'
+nSubFiles = 8 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201810/20181023/'
+filePref = 'darks_10ms_em300__RESTARTED___20181023_Open_Mirror_0'
+nSubFiles = 40 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+dataPath = '/Volumes/BigVampData/201902/20190226/'
+filePref = 'dark_10_em25__RESTARTED___20190226_750-50_Mirror_0'
+nSubFiles = 8 *2 # e.g. 8 acquisitions with 2 cameras = 16 subfiles
+HAFileformat = False
+
+
 
 
 useMedian = True # Take the median of all files, not the mean

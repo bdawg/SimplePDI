@@ -7,11 +7,12 @@ from copy import copy
 
 fileExtn = '.fits'
 dataPath = "/Users/bnorris/DontBackup/simplePDIdata/Ha/"
+dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201709/20170911/"
 
 filePref = 'omiCet_01_HaDifferential-'
 fileSuf = '_Open_EmptySlot_'
 startFileNum = 0
-nSets = 1 # 1 Set is two states x two cams
+nSets = 8 #1 # 1 Set is two states x two cams
 
 saveFilePref = 'allSummedImsCube_WIP_'
 centroidThresh = 2000
@@ -19,7 +20,7 @@ showAllImages = False
 showPlots = True
 saveAllSummedIms = False
 method = 'com' # 'com' or 'max'
-saveCube = True
+saveCube = False #True
 skipFirstFrame = True
 
 # Filter arrangement, listed as [cam1, cam2]
@@ -47,6 +48,7 @@ dim = curCube.shape[0]
 # Indexes are [:, :, Set, State, Channel (camera)]
 allSummedIms = np.zeros([dim, dim, nSets, 2, 2])
 pas = [] # List of PAs from each file read
+maxvals = [] # For testing
 
 for f in range(0, nSets):
     curFileNum = f
@@ -147,6 +149,7 @@ for f in range(0, nSets):
             print(' ')
 
             allSummedIms[:, :, f, s, c] = curCubeShiftedSummed
+            maxvals.append(np.max(curCubeShiftedSummed.ravel()))
 pas = np.asarray(pas)
 
 if saveCube:

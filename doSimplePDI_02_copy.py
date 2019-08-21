@@ -9,18 +9,12 @@ from simplePDI import *
 # Usage for reading *raw* files (no IDL pre-cubing)
 IDLPreCubed = False
 
-dataPath = "/Users/bnorris/DontBackup/vampdata_Oct2018/"
-filePref = 'ABAur_01_20181018_750-50_EmptySlot_0'
-nSubFiles = 40 *2*2
-saveFilePref = 'allSummedImsCube_MAXmeth_darksubt_DONEWITHSIMPLEPDI_'
-nSubFiles = 4 *2*2
+# dataPath = "/Users/bnorris/DontBackup/vampdata_Oct2018/"
+# filePref = 'ABAur_01_20181018_750-50_EmptySlot_0'
+# nSubFiles = 40 *2*2
+# saveFilePref = 'allSummedImsCube_MAXmeth_darksubt_DONEWITHSIMPLEPDI_'
+# nSubFiles = 4 *2*2
 
-dataPath = "/Users/bnorris/DontBackup/pcal_20180712/"
-filePref = 'pcal20180712_set2_nopol_750-50_EmptySlot_'
-nSubFiles = 1 *2*2
-saveFilePref = 'tempsave'
-darkFilename = '../SimplePDI_DATA/summedDarks_pcal20180712_darks_775-50_Mirror_.npz'
-centroidThresh = 5000 #Values below this clipped to zero for centroiding
 
 # dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
 # filePref = 'RhoBoo_02_20180625_750-50_EmptySlot_0'
@@ -46,33 +40,33 @@ centroidThresh = 5000 #Values below this clipped to zero for centroiding
 # # From /Users/bnorris/DontBackup/vampdata_polzEngStars/dark_EM10_20180622_625-50_Mirror_...
 # centroidThresh = 500 #Values below this clipped to zero for centroiding
 
-dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
-filePref = 'altair_02_20180624_750-50_EmptySlot_0'
-nSubFiles = 4 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_EM00_20180624_Open_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
-filePref = 'GJ504_01_20170619_750-50_EmptySlot_0'
-nSubFiles = 8 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
-filePref = 'phiAqr_750_20180622_750-50_EmptySlot_0'
-nSubFiles = 4 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_EM10_20180622_625-50_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201704/20170418/"
-filePref = 'HD183143_03_20170418_750-50_EmptySlot_0'
-nSubFiles = 16 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
+# dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
+# filePref = 'altair_02_20180624_750-50_EmptySlot_0'
+# nSubFiles = 4 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_dark_EM00_20180624_Open_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
+# filePref = 'GJ504_01_20170619_750-50_EmptySlot_0'
+# nSubFiles = 8 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Users/bnorris/DontBackup/vampdata_polzEngStars/"
+# filePref = 'phiAqr_750_20180622_750-50_EmptySlot_0'
+# nSubFiles = 4 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_dark_EM10_20180622_625-50_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201704/20170418/"
+# filePref = 'HD183143_03_20170418_750-50_EmptySlot_0'
+# nSubFiles = 16 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
 
 # dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201709/20170903/"
 # filePref = 'HD183143_01_20170903_750-50_EmptySlot_0'
@@ -102,60 +96,62 @@ centroidThresh = 500 #Values below this clipped to zero for centroiding
 # darkFilename = '../SimplePDI_DATA/summedDarks_dark_em300_20180628_625-50_Mirror_0.npz'
 # centroidThresh = 1000 #Values below this clipped to zero for centroiding
 
-dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201705/20170531/"
-filePref = 'vega_02_20170531_750-50_18holeNudged_0'
-nSubFiles = 24 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/RedDisk/VAMPIRES_AllData_2018/201812/20181215/"
-filePref = 'HD44612_01_20181215_750-50_EmptySlot_0'
-nSubFiles = 16 *2*2
-saveFilePref = 'tempsave_'
-darkFilename = '../SimplePDI_DATA/summedDarks_SKIES_02_20181215_750-50_EmptySlot_0.npz'
-centroidThresh = 100 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/RedDisk/VAMPIRES_AllData_2018/201810/20181022/"
-filePref = 'HD30454_03_20181022_750-50_EmptySlot_0'
-nSubFiles = 40 *2*2
-saveFilePref = 'allImsCube_50pc_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_5ms_128px_em25_20181022_750-50_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-
+# dataPath = "/Volumes/PENDRAGON1/snert/VAMPIRES/VAMPIRESData_201705/20170531/"
+# filePref = 'vega_02_20170531_750-50_18holeNudged_0'
+# nSubFiles = 24 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_10ms_em20_01_20170903_750-50_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/RedDisk/VAMPIRES_AllData_2018/201812/20181215/"
+# filePref = 'HD44612_01_20181215_750-50_EmptySlot_0'
+# nSubFiles = 16 *2*2
+# saveFilePref = 'tempsave_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_SKIES_02_20181215_750-50_EmptySlot_0.npz'
+# centroidThresh = 100 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/RedDisk/VAMPIRES_AllData_2018/201810/20181022/"
+# filePref = 'HD30454_03_20181022_750-50_EmptySlot_0'
+# nSubFiles = 40 *2*2
+# saveFilePref = 'allImsCube_50pc_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_5ms_128px_em25_20181022_750-50_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
 
 
-
-dataPath = "/Volumes/BigVampData/201902/20190225/linked/"
-filePref = 'MWC480_02-04_20190225_broadband_EmptySlot_0'
-nSubFiles = 270 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_256_10_em300_02_20190225_Open_Mirror_0.npz'
-centroidThresh = 500 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20170116/linked/"
-filePref = 'ABAur_01-03_20170116_750-50_EmptySlot_0'
-nSubFiles = 332 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
-centroidThresh = 1000 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/201903/20190320/"
-filePref = 'ABAur_01_20190320_750-50_EmptySlot_0'
-nSubFiles = 104 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_20ms_em300_256px_20190402_750-50_Mirror_0.npz'
-centroidThresh = 1000 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20161215/"
-filePref = 'ABAur_01_20161215_750-50_EmptySlot_0'
-nSubFiles = 32 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_128_10ms_em300_Open_Mirror_.npz'
-centroidThresh = 1000 #Values below this clipped to zero for centroiding
-
+# dataPath = "/Volumes/BigVampData/201902/20190225/linked/"
+# filePref = 'MWC480_02-04_20190225_broadband_EmptySlot_0'
+# nSubFiles = 270 *2*2
+# saveFilePref = 'allImsCube_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_dark_256_10_em300_02_20190225_Open_Mirror_0.npz'
+# centroidThresh = 500 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20170116/linked/"
+# filePref = 'ABAur_01-03_20170116_750-50_EmptySlot_0'
+# nSubFiles = 332 *2*2
+# saveFilePref = 'allImsCube_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
+# centroidThresh = 1000 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/BigVampData/201903/20190320/"
+# filePref = 'ABAur_01_20190320_750-50_EmptySlot_0'
+# nSubFiles = 104 *2*2
+# saveFilePref = 'allImsCube_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_dark_20ms_em300_256px_20190402_750-50_Mirror_0.npz'
+# centroidThresh = 1000 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/BigVampData/SELECTED_COPIES/from20161215/"
+# filePref = 'ABAur_02_20161215_750-50_EmptySlot_0'
+# nSubFiles = 52 *2*2
+# saveFilePref = 'allImsCube_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_darks_256_10ms_em300_20170502_750-50_Mirror_0.npz'
+# centroidThresh = 1000 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/BigVampData/201812/20181214/linked/"
+# filePref = 'ABAur_05-07_20181214_750-50_EmptySlot_0'
+# nSubFiles = 436 *2*2
+# saveFilePref = 'allImsCube_80pc_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_SKIES_02_20181215_750-50_EmptySlot_0.npz'
+# centroidThresh = 1000 #Values below this clipped to zero for centroiding
 
 # dataPath = "/Volumes/BigVampData/201903/20190321/"
 # filePref = 'HD155528_04_20190321_750-50_EmptySlot_0'
@@ -163,32 +159,21 @@ centroidThresh = 1000 #Values below this clipped to zero for centroiding
 # saveFilePref = 'allImsCube_'
 # darkFilename = '../SimplePDI_DATA/summedDarks_dark_10ms_em300_20190321_750-50_Mirror_0.npz'
 # centroidThresh = 150 #Values below this clipped to zero for centroiding
+#
+# dataPath = "/Volumes/BigVampData/201903/20190321/"
+# filePref = 'HD155528_10_750-50_EmptySlot_'
+# nSubFiles = 8 *2*2
+# saveFilePref = 'allImsCube_'
+# darkFilename = '../SimplePDI_DATA/summedDarks_dark_10ms_em300_20190321_750-50_Mirror_0.npz'
+# centroidThresh = 150 #Values below this clipped to zero for centroiding
 
-dataPath = "/Volumes/BigVampData/201903/20190320/"
-filePref = 'HD98800_01_20190320_Open_EmptySlot_0'
-nSubFiles = 36 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_10ms_em300_20190321_750-50_Mirror_0.npz'
-centroidThresh = 150 #Values below this clipped to zero for centroiding
-
-dataPath = "/Volumes/BigVampData/201902/20190226/"
-filePref = 'WDS_02_20190226_750-50_EmptySlot_0'
-filePref = 'HD154445_01_20190226_750-50_EmptySlot_0'
-nSubFiles = 16 *2*2
-saveFilePref = 'allImsCube_'
-darkFilename = '../SimplePDI_DATA/summedDarks_dark_10_em25__RESTARTED___20190226_750-50_Mirror_0.npz'
-centroidThresh = 200 #Values below this clipped to zero for centroiding
 
 dataPath = "/Users/bnorris/DontBackup/pcal_20180712/"
 filePref = 'pcal20180712_set2_nopol_750-50_EmptySlot_'
-filePref = 'pcal20180712_set2_p1_750-50_EmptySlot_'
 nSubFiles = 1 *2*2
 saveFilePref = 'allImsCube_'
 darkFilename = '../SimplePDI_DATA/summedDarks_pcal20180712_darks_775-50_Mirror_.npz'
-centroidThresh = 100 #Values below this clipped to zero for centroiding
-
-
-
+centroidThresh = 5000 #Values below this clipped to zero for centroiding
 
 
 
@@ -208,10 +193,8 @@ skyAnnOuter = 120
 
 luckyCriteria = None #'l2flux'
 # luckyCriteria = 'l2flux'
-luckyPercent = 50
-# luckyPercent = 95
-
-restrictRegion = None
+# luckyPercent = 80
+luckyPercent = 95
 
 # darkFilename = None
 # bgMode = 0
@@ -219,18 +202,17 @@ restrictRegion = None
 
 showAllIms = False
 # showAllIms = True
-previewCropRad = 100 #25
+previewCropRad = 25 #25
 
 comRad=4
 # comRad = 8 # Usually 4 is good, but more if saturated...
 # comRad=3
 
-
 alignCoadd = 5
 alignCoadd = None
 
 singleFileOnly = False #False
-singleFileOnly = True
+
 
 
 
@@ -268,31 +250,27 @@ doDerotate = True
 # loadFilename = 'allImsCube_50pc_HD183143_03_20170418_750-50_EmptySlot_0.npz'
 # loadFilename = 'allImsCube_50pc_HD198478_04_20180623_750-50_EmptySlot_0.npz'
 
-loadFilename = 'allImsCube_50pc_HD30454_03_20181022_750-50_EmptySlot_0.npz'
-# loadFilename = 'allImsCube_50pc_HD44612_01_20181215_750-50_EmptySlot_0.npz'
 
-
+loadFilename = 'allImsCube_ABAur_02_20181017_750-50_EmptySlot_0.npz'
 
 ######################################################################################################
 # Do it
 
 
-
 p = pdiImages(outDir='../SimplePDI_DATA/')
-
 
 p.processRawFiles(dataPath, filePref, nSubFiles, startFileNum=startFileNum,
                   saveFilePref=saveFilePref, centroidThresh=centroidThresh,
                   method='com', twoCamMode = True, bgMode=bgMode, darkFilename=darkFilename,
                   showAllIms=showAllIms, previewCropRad=previewCropRad, comRad=comRad,
                   luckyCriteria=luckyCriteria, luckyPercent=luckyPercent, singleFileOnly=singleFileOnly,
-                  alignCoadd=alignCoadd, restrictRegion=restrictRegion)
+                  alignCoadd=alignCoadd)
 
 # p.loadCube(dataPath, loadFilename, twoCamMode = twoCamMode)
 
 p.makeDiffIms(showPlots=False, twoCamMode=twoCamMode, deRotate=doDerotate, darkOffset=None)
 
-### p.plotStokesIms(crop=0.5, apertureRad=20)
+# p.plotStokesIms(crop=0.5, apertureRad=20)
 
 # p.doMultiCals(apertureRad=20)
 # p.doMultiCals(apertureRad=8)
@@ -303,28 +281,26 @@ p.makeDiffIms(showPlots=False, twoCamMode=twoCamMode, deRotate=doDerotate, darkO
 # p.plotStokesIms(crop=0.25, apertureRad=20)
 
 
-# For lab data 20180712: (no hwp data)
-# Make sure singleFileOnly = True
-p.partialDiffcal('1a', showImageCrop=0.5, showImageType='pQ', clim=[0,1])
-p.plotStokesIms(data='partial', crop=0.5, apertureRad=20, printpQVec=True, fignum=1)
 
 
+# # For lab data 20180712:
 # p.processRawFiles(dataPath, filePref, nSubFiles, startFileNum=startFileNum,
 #                   saveFilePref=saveFilePref, centroidThresh=centroidThresh,
 #                   method='com', twoCamMode = True, bgMode=bgMode, darkFilename=darkFilename,
 #                   showAllIms=False, previewCropRad=25, comRad=4,
 #                   luckyCriteria=None, luckyPercent=99, singleFileOnly=True)
-
 # p.loadCube(dataPath, loadFilename, twoCamMode = twoCamMode)
 
 # p.makeDiffIms(showPlots=False, twoCamMode=twoCamMode, deRotate=doDerotate)
+
+# p.plotSingleIm(imType='p',crop=0.6, cmap='viridis')
 #
-# # p.plotSingleIm(imType='p',crop=0.6, cmap='viridis')
-# #
-# # p.plotStokesIms(crop=0.6, saveFITS=True) #, savePath=dataPath)
-#
-# p.partialDiffcal('1a', showImageCrop=0.5, showImageType='pQ', clim=[0,1])
-#
+# p.plotStokesIms(crop=0.6, saveFITS=True) #, savePath=dataPath)
+
+p.partialDiffcal('1a', showImageCrop=0.5, showImageType='pQ', clim=[0,1])
+p.plotStokesIms(data='partial', crop=0.5, apertureRad=20, printpQVec=True, fignum=2)
+
+
 # im=p.plotSingleIm('partial', imType='pQ', clim=[0,1])
 # p.measureAperture(im, 16, showIm=True, mean=True, showImSize=48)
 

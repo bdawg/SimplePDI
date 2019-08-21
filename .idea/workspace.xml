@@ -46,150 +46,92 @@
     <session id="679160387">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="32" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.5" value="10" />
+          <entry key="project.open.time.6" value="12" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="6583" />
+          <entry key="Python Console" value="15283" />
           <entry key="dummy" value="3" />
-          <entry key="py" value="9714" />
+          <entry key="py" value="21856" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="16297" />
+          <entry key="Python" value="37139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="19" />
+          <entry key="py" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="19" />
+          <entry key="Python" value="65" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4488889">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/simplePDI.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="681" column="45" lean-forward="true" selection-start-line="681" selection-start-column="45" selection-end-line="681" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#125#143#0" expanded="true" />
-                    <marker date="1548312087759" expanded="true" signature="10814:24081" ph="..." />
-                    <marker date="1548312087759" expanded="true" signature="48090:49625" ph="..." />
-                    <marker date="1548312087759" expanded="true" signature="48535:48544" ph="..." />
-                    <marker date="1548312087759" expanded="true" signature="48535:49625" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/makeVampDarks.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lookatCalMeasurements_01.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/simplePDI.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-813">
-                  <caret line="758" column="8" selection-start-line="758" selection-start-column="8" selection-end-line="758" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#125#143#0" expanded="true" />
-                    <marker date="1548312087759" expanded="true" signature="10814:24081" ph="..." />
-                    <marker date="1548312087759" expanded="true" signature="48090:49625" ph="..." />
-                    <marker date="1548312087759" expanded="true" signature="48535:48544" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/doSimplePDI_02.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="149" column="40" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
-                  <folding>
-                    <marker date="1548312532875" expanded="true" signature="471:624" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/polzimtools.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="41" selection-start-line="41" selection-end-line="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/processRawFiles2camTest.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2280">
-                  <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lookatCalTools.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simplePDI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="908" column="33" selection-start-line="908" selection-start-column="33" selection-end-line="908" selection-end-column="33" />
+              <folding>
+                <element signature="e#125#143#0" expanded="true" />
+                <marker date="1566372411671" expanded="true" signature="3358:3378" ph="..." />
+                <marker date="1566372411671" expanded="true" signature="11085:27554" ph="..." />
+                <marker date="1566372411671" expanded="true" signature="53993:55528" ph="..." />
+                <marker date="1566372411671" expanded="true" signature="54438:54447" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickShowPDI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lookatCalMeasurements_01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doSimplePDI_02.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+              <folding>
+                <marker date="1566365249657" expanded="true" signature="471:624" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -200,36 +142,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>doDerotate</find>
-      <find>startFileNum</find>
-      <find>centroid</find>
-      <find>outDir</find>
-      <find>pas</find>
-      <find>showImage</find>
-      <find>showAllIms</find>
-      <find>showPlots</find>
-      <find>method</find>
-      <find>cubeinf</find>
-      <find>nFrms</find>
-      <find>curCube_FLC1</find>
-      <find>nSubFrms</find>
-      <find>allSummedIms</find>
-      <find>singleHWP</find>
-      <find>curFileNum</find>
-      <find>nSubFiles</find>
-      <find>flip</find>
-      <find>useMedian</find>
-      <find>calMat_PreRot</find>
-      <find>useMedianWithinCube</find>
-      <find>dark</find>
       <find>clim</find>
-      <find>crop</find>
-      <find>bsRot</find>
-      <find>allStokesIms</find>
-      <find>id</find>
-      <find>savef</find>
-      <find>idstr</find>
-      <find>outsto</find>
+      <find>20170903</find>
+      <find>allRawPAs</find>
+      <find>darkMed</find>
+      <find>flip</find>
+      <find>rotatePolz</find>
+      <find>allPAs</find>
+      <find>comRad</find>
+      <find>201612</find>
+      <find>preview</find>
+      <find>im</find>
+      <find>201701</find>
+      <find>darkOffset</find>
+      <find>Ibias</find>
+      <find>201810</find>
+      <find>imrange</find>
+      <find>saveCube</find>
+      <find>drop</find>
+      <find>datet</find>
+      <find>paOffset</find>
+      <find>restr</find>
+      <find>curIm</find>
+      <find>centroidThresh</find>
+      <find>/</find>
+      <find>20180712</find>
+      <find>singleFileOnly</find>
+      <find>aperture</find>
+      <find>allSummedIms</find>
+      <find>saveFilePref</find>
+      <find>allPolzstateIms</find>
     </findStrings>
     <replaceStrings>
       <replace>pdiImages</replace>
@@ -250,20 +192,34 @@
         <option value="$PROJECT_DIR$/makeVampFlats_tmpcopy.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$PROJECT_DIR$/makeVampFlats.py" />
-        <option value="$PROJECT_DIR$/processSDIImages_WIP.py" />
         <option value="$PROJECT_DIR$/simplePDIFull_02.py" />
         <option value="$PROJECT_DIR$/luckyCube.py" />
-        <option value="$PROJECT_DIR$/preprocVampires.py" />
         <option value="$PROJECT_DIR$/processRawFiles2camTest.py" />
         <option value="$PROJECT_DIR$/simplePDIFull_03.py" />
         <option value="$PROJECT_DIR$/doSimplePDI_01.py" />
         <option value="$PROJECT_DIR$/polzimtools.py" />
-        <option value="$PROJECT_DIR$/makeVampDarks.py" />
         <option value="$PROJECT_DIR$/lookatCalTool.py" />
         <option value="$PROJECT_DIR$/lookatCalTools.py" />
-        <option value="$PROJECT_DIR$/simplePDI.py" />
-        <option value="$PROJECT_DIR$/doSimplePDI_02.py" />
+        <option value="$PROJECT_DIR$/processSDIImages_WIP.py" />
+        <option value="$PROJECT_DIR$/quickMakeFlats.py" />
+        <option value="$PROJECT_DIR$/quickPolzFiddle.py" />
         <option value="$PROJECT_DIR$/lookatCalMeasurements_01.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02_copy1.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02_copy4.py" />
+        <option value="$PROJECT_DIR$/vampExtractHWPPosns.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02_copy3.py" />
+        <option value="$PROJECT_DIR$/preproc_MakeSymlinksOnly.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02_copy2.py" />
+        <option value="$PROJECT_DIR$/vampScrapeHeaders.py" />
+        <option value="$PROJECT_DIR$/vampPlotHeaderData.py" />
+        <option value="$PROJECT_DIR$/makeVampDarks.py" />
+        <option value="$PROJECT_DIR$/quickShowPDI.py" />
+        <option value="$PROJECT_DIR$/preprocVampires.py" />
+        <option value="$PROJECT_DIR$/preprocVampiresFunc.py" />
+        <option value="$PROJECT_DIR$/runPreprocVampires.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02_copy.py" />
+        <option value="$PROJECT_DIR$/doSimplePDI_02.py" />
+        <option value="$PROJECT_DIR$/simplePDI.py" />
       </list>
     </option>
   </component>
@@ -280,11 +236,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="69" />
-    <option name="y" value="60" />
-    <option name="width" value="1920" />
-    <option name="height" value="1178" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
+    <option name="y" value="23" />
+    <option name="width" value="1742" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -308,10 +264,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <sortByType ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="SimplePDI" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lookatCalMeasurements_01">
+  <component name="RunManager" selected="Python.doSimplePDI_02">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="SimplePDI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -371,28 +338,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="doSimplePDI_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SimplePDI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doSimplePDI_01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -420,7 +365,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lookatCalMeasurements_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="doSimplePDI_02_copy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SimplePDI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -430,7 +375,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lookatCalMeasurements_01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doSimplePDI_02_copy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -444,9 +389,9 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
+        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/anaconda3/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -461,20 +406,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simplePDIFull_03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="quickShowPDI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SimplePDI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/anaconda3/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simplePDIFull_03.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quickShowPDI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runPreprocVampires" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SimplePDI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/anaconda3/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runPreprocVampires.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,19 +451,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.makeVampDarks" />
-      <item itemvalue="Python.simplePDIFull_03" />
-      <item itemvalue="Python.doSimplePDI_01" />
       <item itemvalue="Python.doSimplePDI_02" />
-      <item itemvalue="Python.lookatCalMeasurements_01" />
+      <item itemvalue="Python.quickShowPDI" />
+      <item itemvalue="Python.makeVampDarks" />
+      <item itemvalue="Python.runPreprocVampires" />
+      <item itemvalue="Python.doSimplePDI_02_copy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lookatCalMeasurements_01" />
         <item itemvalue="Python.doSimplePDI_02" />
+        <item itemvalue="Python.doSimplePDI_02_copy" />
+        <item itemvalue="Python.runPreprocVampires" />
+        <item itemvalue="Python.quickShowPDI" />
         <item itemvalue="Python.makeVampDarks" />
-        <item itemvalue="Python.doSimplePDI_01" />
-        <item itemvalue="Python.simplePDIFull_03" />
       </list>
     </recent_temporary>
   </component>
@@ -513,26 +480,35 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="1" y="23" width="1742" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.53893805" visible="true" weight="0.16134185" />
-      <window_info id="Structure" order="1" sideWeight="0.46106195" side_tool="true" visible="true" weight="0.16134185" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.29177377" visible="true" weight="0.20705882" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.7082262" side_tool="true" visible="true" weight="0.20705882" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.14834578" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.14834578" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.65625" weight="0.3159292" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911506" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50296736" side_tool="true" weight="0.27564102" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5035294" side_tool="true" weight="0.33548388" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49703264" weight="0.22566372" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.9125" weight="0.32984293" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.9125" weight="0.32882503" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4964706" visible="true" weight="0.2829493" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -665,31 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocVampires.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simplePDIFull_02.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="386" column="13" selection-start-line="386" selection-start-column="13" selection-end-line="386" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processSDIImages_WIP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/makeVampFlats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -728,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processRawFiles2camTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simplePDIFull_03.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -745,66 +690,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polzimtools.py">
+    <entry file="file://$PROJECT_DIR$/makeDiffImages.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickMakeFlats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="225">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processRawFiles2camTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="159" column="17" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickPolzFiddle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.6/site-packages/scipy/ndimage/measurements.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6960">
+          <caret line="471" selection-start-line="471" selection-end-line="471" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/makeVampFlats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02_copy1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="185" selection-start-line="185" selection-end-line="186" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processSDIImages_WIP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02_copy4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lookatCalTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02_copy3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="152" column="19" lean-forward="true" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vampExtractHWPPosns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/makeVampDarks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="1575">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vampScrapeHeaders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vampPlotHeaderData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02_copy2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="192" column="17" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preproc_MakeSymlinksOnly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runPreprocVampires.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocVampires.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="14" selection-start-line="26" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocVampiresFunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="83" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="83" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1560999065679" expanded="true" signature="1358:1360" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/makeDiffImages.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lookatCalTools.py">
+    <entry file="file://$PROJECT_DIR$/quickShowPDI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doSimplePDI_02.py">
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02_copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="149" column="40" selection-start-line="149" selection-start-column="40" selection-end-line="149" selection-end-column="40" />
-          <folding>
-            <marker date="1548312532875" expanded="true" signature="471:624" ph="..." />
-          </folding>
+        <state relative-caret-position="521">
+          <caret line="299" selection-start-line="299" selection-end-line="300" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simplePDI.py">
+    <entry file="file://$PROJECT_DIR$/polzimtools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="681" column="45" lean-forward="true" selection-start-line="681" selection-start-column="45" selection-end-line="681" selection-end-column="45" />
+        <state relative-caret-position="345">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
-            <element signature="e#125#143#0" expanded="true" />
-            <marker date="1548312087759" expanded="true" signature="10814:24081" ph="..." />
-            <marker date="1548312087759" expanded="true" signature="48090:49625" ph="..." />
-            <marker date="1548312087759" expanded="true" signature="48535:48544" ph="..." />
-            <marker date="1548312087759" expanded="true" signature="48535:49625" ph="..." />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lookatCalMeasurements_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="285">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doSimplePDI_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1566365249657" expanded="true" signature="471:624" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simplePDI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="908" column="33" selection-start-line="908" selection-start-column="33" selection-end-line="908" selection-end-column="33" />
+          <folding>
+            <element signature="e#125#143#0" expanded="true" />
+            <marker date="1566372411671" expanded="true" signature="3358:3378" ph="..." />
+            <marker date="1566372411671" expanded="true" signature="11085:27554" ph="..." />
+            <marker date="1566372411671" expanded="true" signature="53993:55528" ph="..." />
+            <marker date="1566372411671" expanded="true" signature="54438:54447" ph="..." />
           </folding>
         </state>
       </provider>
